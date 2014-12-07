@@ -80,11 +80,11 @@ nav{ position:relative;padding: 0px 0 0 0;}
 .sf-menu li ul,.sf-menu li.sfHover>ul{
 	left: 0;
 	z-index: 999; 
-	width: 100%;
-	padding-top: 38px;
-	background-color: #3498db;
-	top: 81px;
-	padding-bottom: 42px;
+	width: 140%;
+	padding-top: 17px;
+	background-color: #7F8E9E;
+	top: 53px;
+	padding-bottom: 17px;
 
 }
 
