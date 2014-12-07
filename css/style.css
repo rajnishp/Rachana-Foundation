@@ -344,6 +344,23 @@ a.donate:hover {
     background-color:  #60bf93;
 }
 
+a.donate-title {
+    margin-bottom: 21px;
+    margin-top: 12px;
+    float: left;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: bold;
+    line-height: 20px;
+    background-color: #e14f42;
+    padding: 4px 26px 5px 25px;
+}
+
+a.donate-title:hover {
+    background-color:  #60bf93;
+}
+
 .rel1 {
     position: relative;
     top: -3px;
@@ -718,6 +735,7 @@ footer {
 }
 .intro{
 	background:#2c2c2c;
+        /* width: 940px; */
 }
 
 .intro-text{

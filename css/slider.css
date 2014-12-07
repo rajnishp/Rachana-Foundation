@@ -71,6 +71,10 @@
 
 .iosSlider .slider .item3 .inner { background-image: url('../images/slide2.jpg'); }
 
+.iosSlider .slider .item4 .inner { background-image: url('../images/slide3.jpg'); }
+
+.iosSlider .slider .item5 .inner { background-image: url('../images/slide4.jpg'); }
+
 .sliderContainer .slideSelectors {
 	position: absolute;
 	bottom: 0px;
