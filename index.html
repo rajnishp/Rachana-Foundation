@@ -41,11 +41,9 @@
 		<header>
 			<div class="container_12">
 				<div class="grid_12">
-					
-                                    <a href="index.html" class="donate-title pull-left"><b>
-							Rachana Foundation
-						</b></a>
-					
+                   	<a href="index.html" class="donate-title pull-left"><b>
+						Rachana Foundation</b>
+					</a>
 					<div class="menu_block ">
 						<div class="clear"></div>
 						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
@@ -53,49 +51,43 @@
 								<li class="current"><a href="index.html">Home</a></li>
 								<li><a href="about.html">About Us</a></li>
 								<li>
-                                                                    <div class="dropdown">
-                                                                        <a href="#" data-toggle='dropdown'>Learn About IP</a>
-                                                                    </div>
-                                                                    <ul class='dropdown-menu' role='menu'>
-                                                                        <li>
-                                                                            Intellectual Property Rights
-                                                                        </li><hr>
-                                                                        <li>
-                                                                            Trademarks
-                                                                        </li><hr>
-                                                                        <li>
-                                                                            Patents
-                                                                        </li><hr>
-                                                                        <li>
-                                                                            Industrial Design
-                                                                        </li><hr>
-                                                                        <li>
-                                                                            Copyrights
-                                                                        </li><hr>
-                                                                        <li>
-                                                                            Geographic Locations
-                                                                        </li><hr>
-                                                                        <li>
-                                                                            Other Intellectual Property
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle='dropdown'>Learn About IP</a>
+                                    </div>
+                                    <ul class='dropdown-menu' role='menu'>
+                                        <li>
+                                            Intellectual Property Rights
+                                        </li><hr>
+                                        <li>
+                                            Trademarks
+                                        </li><hr>
+                                        <li>
+                                            Patents
+                                        </li><hr>
+                                        <li>
+                                            Industrial Design
+                                        </li><hr>
+                                        <li>
+                                            Copyrights
+                                        </li><hr>
+                                        <li>
+                                            Geographic Locations
+                                        </li><hr>
+                                        <li>
+                                            Other Intellectual Property
+                                        </li>
+                                    </ul>
+                                </li>
 								<li><a href="join_us.html">Join Us</a></li>
-                                                                <li><div class="dropdown">
-                                                                        <a href="#" data-toggle='dropdown'>Resources</a>
-                                                                    </div>
-                                                                    <ul class='dropdown-menu' role='menu'>
-                                                                        <li>
-                                                                            India IP Legislation
-                                                                        </li><hr>
-                                                                        <li>
-                                                                            IP Database
-                                                                        </li><hr>
-                                                                        <li>
-                                                                            WIPO Administered Treaties
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
+                                <li><div class="dropdown">
+                                        <a href="#" data-toggle='dropdown'>Resources</a>
+                                    </div>
+                                    <ul class='dropdown-menu' role='menu'>
+                                        <li><a href ="india-ip-legislation.html">India IP Legislation</li><hr>
+                                        <li><a href ="ip-database.html">IP Database</a></li><hr>
+                                        <li><a href ="wipo-administered-treaties.html">WIPO Administered Treaties</a></li>
+                                    </ul>
+                                </li>
 								<li><a href="report-an-ip-issue.html">Report an IP Issue</a></li>
 								<li><a href="media.html">Media</a></li>
 								<li><a href="blog.html">Blog</a></li>
@@ -379,5 +371,52 @@ Our mission is to empower stakeholders and general public in Intellectual Proper
 			</div>
 		</footer>
 		<script src="js/jquery.hoverdir.js"></script>
+		<script>
+		$(document).ready(function() {
+		 $('.iosSlider').iosSlider({
+			desktopClickDrag: true,
+			snapToChildren: true,
+			navSlideSelector: '.sliderContainer .slideSelectors .item',
+			onSlideComplete: slideComplete,
+			onSliderLoaded: sliderLoaded,
+			onSlideChange: slideChange,
+			scrollbar: false,
+			autoSlide: true,
+			autoSlideTimer: 3300,
+			infiniteSlider: true
+		 });
+		});
+		function slideChange(args) {
+		 $('.sliderContainer .slideSelectors .item').removeClass('selected');
+		 $('.sliderContainer .slideSelectors .item:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+		}
+		function slideComplete(args) {
+		 if(!args.slideChanged) return false;
+		 $(args.sliderObject).find('.text1, .text2').attr('style', '');
+		 $(args.currentSlideObject).find('.text1').animate({
+			right: '100px',
+			opacity: '0.72'
+		 }, 400, 'easeOutQuint');
+		 $(args.currentSlideObject).find('.text2').delay(200).animate({
+			right: '70px',
+			opacity: '0.72'
+		 }, 400, 'easeOutQuint');
+		}
+		function sliderLoaded(args) {
+		 $(args.sliderObject).find('.text1, .text2').attr('style', '');
+		 $(args.currentSlideObject).find('.text1').animate({
+			right: '100px',
+			opacity: '0.72'
+		 }, 400, 'easeOutQuint');
+		 $(args.currentSlideObject).find('.text2').delay(200).animate({
+			right: '70px',
+			opacity: '0.72'
+		 }, 400, 'easeOutQuint');
+		 slideChange(args);
+		}
+		$(function() {
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+			});
+		</script>
 	</body>
 </html>
